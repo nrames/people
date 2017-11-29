@@ -1,0 +1,31 @@
+<h1>
+  <%= @person.first_name + ' ' + @person.last_name %>
+</h1>
+
+<hr />
+
+<div>
+  Age: <%= @person.age %>
+</div>
+
+<div>
+  Single: <%= @person.single ? 'Yes' : 'No' %>
+</div>
+
+<div>
+  Career: <%= @person.career %>
+</div>
+
+<div>
+  Favorite Movie Quote: "<%= @person.movie_quote %>"
+</div>
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'Edit', edit_person_path(@person), class: 'btn btn-primary' %>
+  <%= link_to 'Delete', person_path(@person),
+      method: :delete,
+      data: { confirm: 'Really Delete?' } , class: 'btn btn-primary' %>
+  <%= link_to 'View All', people_path, class: 'btn btn-primary' %>
+</div>

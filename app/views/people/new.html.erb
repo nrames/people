@@ -1,0 +1,27 @@
+<h1>Create New Person</h1>
+
+<%= form_for @person do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true %>
+  <br />
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %>
+  <br />
+  <%= f.label :age %>
+  <%= f.text_field :age, required: true %>
+  <br />
+  <%= f.label :career %>
+  <%= f.text_field :career, required: true %>
+  <br />
+  <%= f.label :movie_quote %>
+  <%= f.text_area :movie_quote, required: true %>
+  <br />
+  <%= f.check_box :single %>
+  <%= f.label :single %>
+  <br />
+  <%= f.submit "Create Person", :class => "btn btn-large" %>
+<% end %>
+
+<br />
+
+<%= link_to 'Cancel', people_path, class: 'btn btn-small' %>
